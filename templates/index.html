@@ -1,15 +1,6 @@
-<!doctype HTML>
-<html>
-    <head>
-        <title> Home Page </title>
-    </head>
-    <body>
-        <h1> Home Page! </h1>
+{% extends "base.html" %}
+{% block title %} Home Page  {% endblock %}
+{% block content %}
 
-        <p> {{n}}</p>
-        {%  for name in content %}
-            <p> {{name}}</p>
-        {% endfor %}
-    </body>
-
-</html>
+<h1> This is the index.html page </h1>
+{% endblock %}
