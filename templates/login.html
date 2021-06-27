@@ -2,11 +2,13 @@
 {% block title %}Login Page{% endblock %}
 
 {% block content %}
+<div class="container">
 <form action="#" method="post">
-    <p> Name: </p>
-    <p><input type="text" name="nm" />
-    <p><input type="submit" value="submit" />
-
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" name="nm" placeholder="Name" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Button</button>
+    </div>
 
 </form>
+</div>
 {% endblock %} 
