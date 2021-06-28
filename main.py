@@ -1,5 +1,5 @@
 ''' short backend project utilising Flask '''
-from flask import Flask, redirect, url_for, render_template, request, session
+from flask import Flask, redirect, url_for, render_template, request, session, flash
 from datetime import timedelta
 
 app = Flask(__name__)
@@ -19,7 +19,10 @@ def login():
         current_user = request.form["nm"]
         session["user"] = current_user
         return redirect(url_for("user"))
-    return render_template("login.html")
+    else:
+        if "user" in session:
+            return redirect(url_for("user"))
+        return render_template("login.html")
 
 @app.route("/user")
 def user():
@@ -34,6 +37,7 @@ def user():
 def logout():
     ''' removes user from the session data on the client side '''
     session.pop("user",None)
+    flash("You have been successfully logged out", "info")
     return redirect(url_for("login"))
 
 if __name__ == "__main__":
