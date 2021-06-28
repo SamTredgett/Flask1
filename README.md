@@ -3,5 +3,4 @@
 A short experimental project refamiliarising myself with the flask framework.
 Currently in progress implementing the following:
  - Structure for logins using HTTP Requests that is secure and encrypted
- - Neaten up the other pages using some more bootstrap
-
+ - Sorting out flash messaging for the logout page
