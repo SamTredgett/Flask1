@@ -10,6 +10,10 @@
             {% endfor %}
         {% endif %}
 {% endwith %}
-<p> Welcome, {{user}} </p>
+<form action="#" method="POST">
+<label for="inputPassword5" class="form-label">Email</label>
+<input type="email" name="email"placeholder="Enter Email" value="{{email if email}}" class="form-control">
+<button type="submit" value="submit" class="btn btn-primary">Submit</button>
+</form>
 {% endblock %}
 
